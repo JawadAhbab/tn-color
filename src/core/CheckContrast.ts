@@ -4,16 +4,16 @@ export class CheckContrast {
   private bgcolor: Color
   private fgcolor: Color
   private size: number
+  private largeAA = 3
+  private smallAA = 4.5
+  private largeAAA = 4.5
+  private smallAAA = 7
   constructor(bgcolor: string, fgcolor: string, size = 16) {
     this.bgcolor = Color(bgcolor)
     this.fgcolor = Color(fgcolor)
     this.size = size
   }
 
-  private largeAA = 3
-  private smallAA = 4.5
-  private largeAAA = 4.5
-  private smallAAA = 7
   private get large() {
     return this.size >= 18
   }
