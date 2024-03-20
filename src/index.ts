@@ -1,4 +1,4 @@
-export { CheckContrast } from './core/CheckContrast'
+export { Contrast } from './core/Contrast'
 export { Color } from './core/color'
 export { colorDiff } from './core/colorDiff'
 export { isDark } from './core/isDark'

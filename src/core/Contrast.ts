@@ -1,6 +1,6 @@
 import { Color } from './color'
 
-export class CheckContrast {
+export class Contrast {
   private bgcolor: Color
   private fgcolor: Color
   private size: number
