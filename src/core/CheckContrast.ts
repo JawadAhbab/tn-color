@@ -9,21 +9,26 @@ export class CheckContrast {
     this.fgcolor = Color(fgcolor)
     this.size = size
   }
+
+  private largeAA = 3
+  private smallAA = 4.5
+  private largeAAA = 4.5
+  private smallAAA = 7
+  private get large() {
+    return this.size >= 18
+  }
+
+  public get contrast() {
+    return this.bgcolor.contrast(this.fgcolor)
+  }
+
+  public get passAA() {
+    const cutoff = this.large ? this.largeAA : this.smallAA
+    return this.contrast >= cutoff
+  }
+
+  public get passAAA() {
+    const cutoff = this.large ? this.largeAAA : this.smallAAA
+    return this.contrast >= cutoff
+  }
 }
-
-// const isLevelAA = (bg: string, fg: string, fs: number) => {
-//   var result = check(bg, fg, fs)
-//   // return result.WCAG_AA
-// }
-// const isLevelAAA = (bg: string, fg: string, fs: number) => {
-//   var result = check(bg, fg, fs)
-//   // return result.WCAG_AAA
-// }
-
-// const check = (colorA: string, colorB: string, fontSize: number) => {
-//   if (!colorA || !colorB) return false
-//   // var l1 = hexToLuminance(colorA)
-//   // var l2 = hexToLuminance(colorB)
-//   // var contrastRatio = getContrastRatio(l1, l2)
-//   // return verifyContrastRatio(contrastRatio)
-// }

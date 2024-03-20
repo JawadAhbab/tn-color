@@ -1,9 +1,7 @@
-import { contrastColor } from 'contrast-color'
-import { isDark } from '../src/index'
+import { CheckContrast } from '../src'
 
-console.log(
-  contrastColor({
-    bgColor: '#00000',
-    threshold: 165,
-  })
-)
+const check = new CheckContrast('#F0F3F6', '#405060', 12.75) // 7.44
+
+console.log(check.contrast)
+console.log(check.passAA)
+console.log(check.passAAA)
