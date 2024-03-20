@@ -1,4 +1,15 @@
-export class CheckContrast {}
+import { Color } from './color'
+
+export class CheckContrast {
+  private bgcolor: Color
+  private fgcolor: Color
+  private size: number
+  constructor(bgcolor: string, fgcolor: string, size = 16) {
+    this.bgcolor = Color(bgcolor)
+    this.fgcolor = Color(fgcolor)
+    this.size = size
+  }
+}
 
 // const isLevelAA = (bg: string, fg: string, fs: number) => {
 //   var result = check(bg, fg, fs)
