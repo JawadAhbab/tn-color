@@ -1,4 +1,4 @@
-import { Color } from './color'
+import { Color } from './colorx'
 
 export class Contrast {
   private bgcolor: Color
