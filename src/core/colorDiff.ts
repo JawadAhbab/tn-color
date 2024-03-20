@@ -1,4 +1,4 @@
-import { Color } from './colorx'
+import { Color } from './Color'
 
 const maxdiff = Math.sqrt(Math.pow(101, 2) + Math.pow(257, 2) + Math.pow(257, 2))
 export const colorDiff = (cA: string, cB: string) => {
