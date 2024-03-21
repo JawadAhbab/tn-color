@@ -576,13 +576,6 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 
 },{}],"dnXN7":[function(require,module,exports) {
 var _src = require("../src");
-console.log((0, _src.betterContrast)("black", [
-    "black",
-    "white",
-    "red",
-    "blue",
-    "pink"
-]));
 
 },{"../src":"h7u1C"}],"h7u1C":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
