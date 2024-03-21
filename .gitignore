@@ -1,2 +1,3 @@
 node_modules/
 .dev/parcel/cache
+.dev/parcel/dist
