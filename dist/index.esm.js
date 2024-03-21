@@ -38,6 +38,14 @@ class Contrast {
     return this.contrast >= cutoff;
   }
 }
+const betterContrast = (bgcolor, colors) => {
+  const bg = Color(bgcolor);
+  const map = colors.map(color => ({
+    color,
+    contrast: bg.contrast(Color(color))
+  }));
+  return map.sort((a, b) => b.contrast - a.contrast)[0].color;
+};
 const maxdiff = Math.sqrt(Math.pow(101, 2) + Math.pow(257, 2) + Math.pow(257, 2));
 const colorDiff = (cA, cB) => {
   const colorA = Color(cA).lab();
@@ -58,4 +66,4 @@ const isLight = function (bgColor) {
   let threshold = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 165;
   return !isDark(bgColor, threshold);
 };
-export { Color, Contrast, colorDiff, isDark, isLight };
+export { Color, Contrast, betterContrast, colorDiff, isDark, isLight };
